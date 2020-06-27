@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="sticker">
+        <div class="navbar clear">
+            <a href="" class="logo">JEWEL RANA</a>
+            <div class="menu-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">ABOUT ME</a></li>
+                    <li><a href="">SKILL</a></li>
+                    <li><a href="">EDUCATION</a></li>
+                    <li>
+                        <span class="open-submenu">SERVICE <span class="arrow down"></span></span>
+                        <ul>
+                            <li><a href="">WORDPRESS</a></li>
+                            <li><a href="">HTML & CSS</a></li>
+                            <li><a href="">JAVASCRIPT</a></li>
+                            <li><a href="">PHOTOSHOP</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">PORTFOLIO</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>	
+
+
+
+
+
+    <div  class="container_wrepper container_bg">
+        <div class="form_box">
+            <h1>Contact now <i class="fas fa-sort-numeric-down    "></i></h1>
+            <div class="input_box">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <input type="Email" placeholder="Email Id">
+            </div>
+            <div class="input_box">
+                <i class="fa fa-key" aria-hidden="true"></i>
+            <input type="password" placeholder="password" id="myinput">
+            <span class="eye_ion" onclick="myFunction()" >
+                    <i id="hidden1" class="fa fa-eye" aria-hidden="true"></i>
+                    <i id="hidden2" class="fa fa-eye-slash" aria-hidden="true"></i>
+                </span>
+            </div>
+        <a href=""> <button type="button" class="login_btn">Login</button></a>
+        </div>
+    </div>
+    
+<!-----footer------>
+<footer>
+    <div class="footer_wrapper">
+        <div class="footer_container">
+            <div data-aos="fade-up-right" class="content1">
+                <h1>JEWEL RANA</h1>
+                <P>WEB DESIGNER & DEVELOPER</P>
+                <h2>About us</h2>
+                <p>We went to help bring talanted students <br> and unique startups together</p>
+                <h3>Contact Us</h3>
+                <div class="icon">
+                    <img src="img/call.png" alt="call.png"><span>01708648728</span><br>
+                    <img src="img/email.png" alt="email.png"><span>mdjewelrana64876487@gmail.com</span>
+                </div>
+
+            </div>
+            <div data-aos="fade-up-left" class="content2">
+                <h2> information</h2>
+                <li> <a href="">About Us</a></li>
+                <li> <a href="">More Search</a></li>
+                <li> <a href="">Testimonials</a></li>
+                <li> <a href="">Events</a></li>
+
+            </div>
+            <div  data-aos="fade-up" class="content3">
+                <h2>Helpful link</h2>
+                
+                <li> <a href="">Services</a></li>
+                <li> <a href=""> terms & Condition</a></li>
+                <li> <a href="">Privacy Policy</a> </li>
+            </div>
+            <div  data-aos="fade-down" class="content4">
+                <h2>Subscribe More info</h2>
+                <input type="email" placeholder="Enter your Email"><br>
+               <a href="#"><input type="submit" value="Subscribe"></a> 
+
+            </div>
+
+        </div>
+        <div class="footer_media">
+            <div class="mediaicon">
+                <a href=""><img src="img/fb.png" alt=""></a>  
+                <a href=""><img src="img/gplus.png" alt=""></a>   
+                <a href=""> <img src="img/tw.png" alt=""></a>
+                <a href=""><img src="img/ldin.png" alt=""></a> 
+                </div>
+            <p>@all right reserved by jewel rana</p>
+        </div>
+    </div>
+</footer>
+
+<!---end of footer-------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+
+   
+    <!--------------------start script------------------> 
+    <script type="text/javascript">
+    var menu = $(".menu");
+    $(window).resize(function(){
+        $(".menu-toggle").removeClass("active");
+        if($(window).innerWidth() > 600){
+            menu.show();
+        } else {
+            menu.hide();
+        }
+    });
+    $(".menu-toggle").click(function(){
+        $(this).toggleClass("active");
+        menu.slideToggle();
+    })
+    $(".open-submenu").click(function(){
+        $(this).toggleClass("active");
+        $(this).next("ul").slideToggle();
+        $(this).children(".arrow").toggleClass("down up");
+    });
+    
+    </script>
+
+    <script>
+    AOS.init({
+        offset:200,
+        duration: 1000,
+    });
+  </script>
+  	<script type="text/javascript">
+		$(document).ready(function() {
+			var s = $("#sticker");
+			var pos = s.position();					   
+			$(window).scroll(function() {
+				var windowpos = $(window).scrollTop();
+				if (windowpos >= pos.top) {
+					s.addClass("stick");
+				} else {
+					s.removeClass("stick");	
+				}
+			});
+		});
+        </script>
+        <!---contact-form-script-->
+         <script>
+            function myFunction(){
+                var x = document.getElementById("myinput");
+                var y = document.getElementById("hidden1");
+                var z = document.getElementById("hidden2")
+            if(x.type === 'password'){
+                x.type= "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            }
+            else{
+                x.type= "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+    
+            }
+    
+        </script>
+</body>
+</html>
